@@ -1,0 +1,9 @@
+
+
+kubectl run my-nginx --image=nginx --replicas=2 --port=80
+kubectl expose deployment my-nginx --port=80 --type=LoadBalancer
+
+
+kubectl create -f azure-vote/azure-vote-backend.yaml
+kubectl create -f azure-vote/azure-vote-frontend.yaml
+kubectl get service azure-vote-front --watch
