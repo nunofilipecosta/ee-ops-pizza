@@ -1,8 +1,8 @@
 # ee-ops-pizza
 
 1. to run the scripts in this repository first run `az login`
-2. execute `create-rg.sh`
-3. execute 
+2. execute `create-rg.sh`, this will create both `acs` and `aks` resource groups
+3. execute `create-acs.sh` and then `create-aks.sh`
 
 ## Links
 
