@@ -10,4 +10,5 @@ kubectl get service azure-vote-front --watch
 
 
 az acs create --orchestrator-type kubernetes --resource-group ee-ops-weu-acs-pizza --name myACSK8sCluster --generate-ssh-keys
-azure group deployment create --resource-group ee-ops-weu-acs-pizza --template-file azuredeploy.json --parameters azuredeploy.parameters.json
+az group deployment create --resource-group ee-ops-weu-acs-pizza --template-file azuredeploy.json --parameters azuredeploy.parameters.json
+az group deployment validate --resource-group ee-ops-weu-acs-pizza --template-file azuredeploy.json --parameters azuredeploy.parameters.json
