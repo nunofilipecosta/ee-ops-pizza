@@ -7,14 +7,14 @@ spec:
   ports:
   - port: 80
   selector:
-    app: azure-vote-frontapiVersion: apps/v1beta1
+    app: azure-vote-front
 ---
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: azure-vote-front
 spec:
-  replicas: 1
+  replicas: 4
   template:
     metadata:
       labels:

@@ -5,6 +5,10 @@ source ./logger.sh
 #popd || return 1
 clear
 
+log_info 'Creating resource group "ee-ops-weu-acse-pizza"'
+az group create -n ee-ops-weu-acse-pizza -l westeurope
+log_info 'Finished creating resource group "ee-ops-weu-acse-pizza"'
+
 log_info 'Creating resource group "ee-ops-weu-acs-pizza"'
 az group create -n ee-ops-weu-acs-pizza -l westeurope
 log_info 'Finished creating resource group "ee-ops-weu-acs-pizza"'

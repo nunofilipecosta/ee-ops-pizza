@@ -4,11 +4,9 @@ kubectl run my-nginx --image=nginx --replicas=2 --port=80
 kubectl expose deployment my-nginx --port=80 --type=LoadBalancer
 
 
-kubectl create -f azure-vote/azure-vote-backend.yaml
-kubectl create -f azure-vote/azure-vote-frontend.yaml
+
+
+kubectl create -f azure-vote/azure-vote-backend.yml
+kubectl create -f azure-vote/azure-vote-frontend.yml
 kubectl get service azure-vote-front --watch
 
-
-az acs create --orchestrator-type kubernetes --resource-group ee-ops-weu-acs-pizza --name myACSK8sCluster --generate-ssh-keys
-az group deployment create --resource-group ee-ops-weu-acs-pizza --template-file azuredeploy.json --parameters azuredeploy.parameters.json
-az group deployment validate --resource-group ee-ops-weu-acs-pizza --template-file azuredeploy.json --parameters azuredeploy.parameters.json

@@ -1,0 +1,1 @@
+az aks kubernetes get-credentials -g ee-ops-weu-aks-pizza -n myAKSK8sCluster
